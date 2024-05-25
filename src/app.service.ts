@@ -16,4 +16,8 @@ export class AppService {
     console.log('Post request')
     return(true)
   }
+
+  getFoo() :  string  {
+    return 'foo'
+  }
 }
