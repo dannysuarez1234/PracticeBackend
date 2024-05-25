@@ -25,6 +25,6 @@ export class AppController {
 
   @Get('/foo') 
   getFoo(){
-    return this.appService.getFoo()
+    return this.appService.getProduct()
   }
 }

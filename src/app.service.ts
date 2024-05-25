@@ -1,7 +1,13 @@
 import { Injectable } from '@nestjs/common';
+import { ProductService } from './modules/product/product.service';
+import { Product } from './types/product';
 
 @Injectable()
 export class AppService {
+  constructor(
+    private readonly productService: ProductService
+  ) {}
+
   getHello(): string {
     return 'Hello World!';
   }
@@ -17,7 +23,7 @@ export class AppService {
     return(true)
   }
 
-  getFoo() :  string  {
-    return 'foo'
+  getProduct() : Product {
+    return this.productService.getProduct();
   }
 }
