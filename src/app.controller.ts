@@ -22,4 +22,9 @@ export class AppController {
   postRequest(): boolean{
     return this.appService.postTest();
   }
+
+  @Get('/foo') 
+  getFoo(){
+    return this.appService.getFoo()
+  }
 }
